@@ -1,4 +1,5 @@
 import React from 'react';
+import LineGraph from './LineGraph';
 import './NewsFeed.css';
 function NewsFeed() {
   return (
