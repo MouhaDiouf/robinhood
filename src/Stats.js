@@ -17,7 +17,6 @@ function Stats() {
 
   const getMyStocks = () => {
     db.collection('myStocks').onSnapshot((snapshot) => {
-      console.log(snapshot);
       let promises = [];
       let tempData = [];
       snapshot.docs.map((doc) => {

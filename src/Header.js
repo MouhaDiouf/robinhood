@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import logo from './robinhood.svg';
-import CloseIcon from '@material-ui/icons/Close';
 import './Header.css';
 function Header() {
   const addClassName = (e) => {
-    const element = e.target;
+    let element = e.target;
+    if (element.classList.contains('header__icon')) {
+      element = element.parentElement;
+    }
     if (element.classList.contains('open')) {
       element.classList.remove('open');
       setShowMenu(false);
