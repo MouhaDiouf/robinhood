@@ -1,6 +1,6 @@
 # Building a Robinhood Clone with React 
 
-![screenshot](./screenshot.png)
+![screenshot](./screenshot.jpg)
 
 
 ## Technologies
