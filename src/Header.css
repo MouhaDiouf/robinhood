@@ -49,3 +49,118 @@
 .header__menuItems a:hover {
   color: #5ac53b;
 }
+
+.header__navigation {
+  transition: all 0.5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  height: 53px;
+  z-index: 100;
+  width: 53px;
+  position: fixed;
+  display: none;
+}
+
+.header__icon {
+  height: 5px;
+  background-color: #5ac53b;
+  width: 50px;
+  transition: all 0.5s ease-in-out;
+
+  margin: 0;
+}
+
+.header__icon::before,
+.header__icon::after {
+  content: '';
+  height: 5px;
+  width: 50px;
+  position: absolute;
+  background-color: #5ac53b;
+}
+
+.header__icon::after {
+  transform: translateY(10px);
+  transition: all 0.5s ease-in-out;
+}
+.header__icon::before {
+  transform: translateY(-10px);
+  transition: all 0.5s ease-in-out;
+}
+
+.header__navigation.open .header__icon {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.header__navigation.open .header__icon::before {
+  transform: translate(50px, 0px) rotate(45deg);
+  background-color: #313638;
+}
+
+.header__navigation.open .header__icon::after {
+  transform: translate(50px, 0px) rotate(-45deg);
+  background-color: #313638;
+}
+
+.overlay {
+  opacity: 0.9;
+  background-color: #ccc;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay .header__menuItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay .header__menuItems a {
+  color: black;
+  font-size: 18px;
+  margin: 15px auto;
+}
+
+.overlay .header__menuItems a:hover {
+  color: #5ac53b;
+}
+
+.overlay.close {
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+.overlay.open {
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+.overlay .close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .overlay.open {
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+}
+@media (max-width: 700px) {
+  .header__navigation {
+    display: flex;
+    top: 10px;
+  }
+  .header__wrapper {
+    display: none;
+  }
+}
