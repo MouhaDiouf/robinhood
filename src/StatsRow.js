@@ -1,11 +1,32 @@
 import React from 'react';
+import { db } from './firebase';
 import './StatsRow.css';
 import StockChart from './stock.svg';
 
 function StatsRow({ price, openPrice, volume, name }) {
   const percentage = ((price - openPrice) / openPrice) * 100;
 
-  const getModal = () => {};
+  const getModal = () => {
+    db.collection('myStocks')
+      .where('ticker', '==', name)
+      .get()
+      .then((querySnapshot) => {
+        if (!querySnapshot.empty) {
+          querySnapshot.forEach((doc) => {
+            db.collection('myStocks')
+              .doc(doc.id)
+              .update({
+                shares: (doc.data().shares += 1),
+              });
+          });
+        } else {
+          db.collection('myStocks').add({
+            ticker: name,
+            shares: 1,
+          });
+        }
+      });
+  };
   return (
     <div className="row" onClick={getModal}>
       <div className="row__intro">

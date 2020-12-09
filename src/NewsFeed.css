@@ -1,6 +1,7 @@
 .newsfeed {
   flex: 0.7;
   color: white;
+  margin-left: 35px;
 }
 
 .newsfeed__portfolio {
@@ -52,4 +53,59 @@
 
 .newsfeed__chart {
   width: 100%;
+}
+
+.newsfeed__popularlists__section {
+  margin-top: 60px;
+}
+
+.newsfeed__popularlists__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.newsfeed__topmovers__intro__details {
+  display: flex;
+  justify-content: space-between;
+  color: darkgrey;
+}
+
+.newsfeed__topmovers__intro__details p:nth-child(2) {
+  font-weight: bold;
+  color: orange;
+}
+
+.newsfeed__topmovers__cards__container {
+  background-color: black;
+  justify-content: space-evenly;
+  padding: 20px 20px 20px 0px;
+  display: flex;
+}
+
+.newsfeed__topmovers__card {
+  background-color: black;
+  color: white;
+  padding: 20px 20px 20px 20px;
+  margin-left: 12px;
+  width: 90px;
+  height: 120px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.newsfeed__topmovers__card__name {
+}
+
+.newsfeed__topmovers__card__numbers {
+  color: #66ff00;
+}
+
+.MuiChip-outlined {
+  color: white !important;
+  border: 1px solid #31363a !important;
 }
