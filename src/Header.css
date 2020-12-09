@@ -166,6 +166,9 @@
   .header__wrapper {
     display: none;
   }
+  .header__logo {
+    display: block;
+  }
 }
 
 @media (max-width: 800px) {
