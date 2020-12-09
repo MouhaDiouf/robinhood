@@ -47,9 +47,6 @@ function Header() {
       </div>
       <div className={`mobile-menu overlay ${showMenu ? 'open' : 'close'}`}>
         <div className="header__menuItems" onClick={handleMenu}>
-          <div className="header__logo">
-            <img src={logo} alt="logo" width={25} />
-          </div>
           <a href="#" className="menu__navLink">
             Free Stocks
           </a>
