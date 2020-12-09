@@ -24,6 +24,9 @@ function Header() {
 
   return (
     <>
+      <div className="header__logo__mobile">
+        <img src={logo} alt="logo" width={25} />
+      </div>
       <div className="header__navigation" onClick={handleMenu}>
         <div className="header__icon"></div>
       </div>
