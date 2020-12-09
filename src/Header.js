@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import logo from './robinhood.svg';
 import './Header.css';
 function Header() {
-  const addClassName = (e) => {
+  const handleMenu = (e) => {
     let element = e.target;
-    if (element.classList.contains('header__icon')) {
-      element = element.parentElement;
+    if (
+      element.classList.contains('header__icon') ||
+      element.classList.contains('menu__navLink')
+    ) {
+      console.log('clicked element is ', element);
+      element = document.querySelector('.header__navigation');
     }
     if (element.classList.contains('open')) {
       element.classList.remove('open');
@@ -20,7 +24,7 @@ function Header() {
 
   return (
     <>
-      <div className="header__navigation" onClick={addClassName}>
+      <div className="header__navigation" onClick={handleMenu}>
         <div className="header__icon"></div>
       </div>
       <div className="header__wrapper">
@@ -42,12 +46,22 @@ function Header() {
         </div>
       </div>
       <div className={`mobile-menu overlay ${showMenu ? 'open' : 'close'}`}>
-        <div className="header__menuItems">
-          <a href="#">Free Stocks</a>
-          <a href="#">Porfolio</a>
-          <a href="#">Cash</a>
-          <a href="#">Messages</a>
-          <a href="#">Account</a>
+        <div className="header__menuItems" onClick={handleMenu}>
+          <a href="#" className="menu__navLink">
+            Free Stocks
+          </a>
+          <a href="#" className="menu__navLink">
+            Porfolio
+          </a>
+          <a href="#" className="menu__navLink">
+            Cash
+          </a>
+          <a href="#" className="menu__navLink">
+            Messages
+          </a>
+          <a href="#" className="menu__navLink">
+            Account
+          </a>
         </div>
       </div>
     </>
