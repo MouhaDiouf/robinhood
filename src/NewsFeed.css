@@ -1,7 +1,7 @@
 .newsfeed {
   flex: 0.7;
   color: white;
-  margin-left: 35px;
+  margin: 0 30px;
 }
 
 .newsfeed__portfolio {
