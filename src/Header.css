@@ -121,6 +121,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 0;
 }
 
 .overlay .header__menuItems a {
@@ -164,5 +165,12 @@
   }
   .header__wrapper {
     display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .stats__container {
+    width: 100%;
+    margin-top: 20px;
   }
 }
