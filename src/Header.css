@@ -95,16 +95,16 @@
 
 .header__navigation.open .header__icon::before {
   transform: translate(50px, 0px) rotate(45deg);
-  background-color: #313638;
+  background-color: white;
 }
 
 .header__navigation.open .header__icon::after {
   transform: translate(50px, 0px) rotate(-45deg);
-  background-color: #313638;
+  background-color: white;
 }
 
 .overlay {
-  opacity: 0.98;
+  opacity: 0.98g;
   background-color: #313638;
   position: fixed;
   width: 100%;
